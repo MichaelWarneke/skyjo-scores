@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.card {
+  @apply rounded bg-vesuvius-800 shadow-md overflow-hidden relative p-4 w-11/12 md:w-8/12 lg:w-1/2 text-vesuvius-50;
+}
+
+.card-header {
+  @apply text-center text-lg font-bold uppercase mb-3;
+}
+
+.card-content {
+  @apply rounded-t bg-vesuvius-700 overflow-hidden p-4;
+}
+
+.card-actions {
+  @apply rounded-b bg-vesuvius-600 p-4;
+}
+
+.card-actions > button {
+  @apply rounded bg-vesuvius-500 p-2 hover:bg-vesuvius-800;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

@@ -1,0 +1,18 @@
+<form class="rounded mt-2 p-2 player-input-form border">
+  <div class="player-input flex justify-end items-center">
+    <span class="mr-3">New Player :</span>
+    <input
+      class="rounded p-1 mr-3 bg-vesuvius-300 text-vesuvius-950"
+      #playerName
+      placeholder="Kelly"
+    />
+    <button
+      (click)="add(playerName.value); playerName.value = ''"
+      type="button"
+    >
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+    </svg>
+    </button>
+  </div>
+</form>

@@ -1,0 +1,18 @@
+  <div class="card">
+    <div class="card-header">
+      <span>Players</span>
+    </div>
+    <div class="card-content">
+      <app-player-list
+        [players]="players | async"
+        (deletePlayer)="deletePlayer($event)"
+      ></app-player-list>
+  
+      <app-player-input (addPlayer)="addPlayer($event)"></app-player-input>
+    </div>
+    <div class="card-actions">
+      <button (click)="start()" class="" type="button">
+        Start Game
+      </button>
+    </div>
+  </div>

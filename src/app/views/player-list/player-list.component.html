@@ -1,0 +1,26 @@
+<div *ngFor="let player of players" class="player-list flex justify-between mb-2">
+  <input
+    class="rounded p-1 w-full mr-3 bg-vesuvius-300 text-vesuvius-950"
+    [(ngModel)]="player.name"
+    #ctrl="ngModel"
+    type="text"
+    aria-label="Player name"
+  />
+  <button (click)="deletePlayer.emit(player)" type="button">
+    <svg
+      class="w-6 h-6"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.5"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+      ></path>
+    </svg>
+  </button>
+</div>

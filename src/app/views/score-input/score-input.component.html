@@ -1,0 +1,22 @@
+<div *ngFor="let player of players">
+  <div class="score-input-list flex justify-between mb-2">
+    <span class="mr-3">{{ player.name }}</span>
+    <div>
+      <input
+      class="rounded p-1 mr-3 w-12 bg-vesuvius-300 text-vesuvius-950"
+        [(ngModel)]="player.points[round || 0]"
+        (change)="pointsChanged.emit(player)"
+        #ctrl="ngModel"
+        type="number"
+        aria-label="Points"
+      />
+    </div>
+  </div>
+</div>
+<button
+  *ngIf="!gameOver"
+  (click)="nextRound.emit()"
+  type="button"
+>
+  Next
+</button>

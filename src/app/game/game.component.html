@@ -1,0 +1,21 @@
+<div class="card">
+  <div class="card-header">
+    <span>Round {{ round$ | async }}</span>
+  </div>
+  <div class="card-content">
+    <app-score-input
+      [players]="players$ | async"
+      [gameOver]="gameOver$ | async"
+      [round]="round$ | async"
+      (nextRound)="nextRound()"
+      (pointsChanged)="pointsChanged($event)"
+    ></app-score-input>
+    <app-score-table
+      [players]="playersSorted$ | async"
+      [gameOver]="gameOver$ | async"
+    ></app-score-table>
+  </div>
+  <div class="card-actions">
+    <button (click)="newGameBtn()" type="button">New Game</button>
+  </div>
+</div>

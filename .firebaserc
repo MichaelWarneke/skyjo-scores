@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "skyjo-scores": {
+      "hosting": {
+        "skyjo-scores": [
+          "skyjo-scores"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "skyjo-scores"
+  }
+}

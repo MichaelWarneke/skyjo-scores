@@ -1,14 +1,14 @@
-<div *ngFor="let player of players" class="player-list flex justify-between mb-2">
+<div *ngFor="let player of players" class="player-list flex justify-between items-center mb-2">
   <input
-    class="rounded p-1 w-full mr-3 bg-vesuvius-300 text-vesuvius-950"
+    class="rounded p-1 w-full mr-3"
     [(ngModel)]="player.name"
     #ctrl="ngModel"
     type="text"
     aria-label="Player name"
   />
-  <button (click)="deletePlayer.emit(player)" type="button">
+  <button class="icon-button" (click)="deletePlayer.emit(player)" type="button">
     <svg
-      class="w-6 h-6"
+      class=""
       fill="none"
       stroke="currentColor"
       stroke-width="1.5"

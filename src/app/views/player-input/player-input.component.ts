@@ -4,7 +4,7 @@ import { FormControl } from '@angular/forms';
 @Component({
   selector: 'app-player-input',
   templateUrl: './player-input.component.html',
-  styleUrls: ['./player-input.component.scss']
+  styleUrls: ['./player-input.component.css']
 })
 export class PlayerInputComponent {
 

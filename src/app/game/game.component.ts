@@ -6,7 +6,7 @@ import { Observable, of } from 'rxjs';
 @Component({
   selector: 'app-game',
   templateUrl: './game.component.html',
-  styleUrls: ['./game.component.scss']
+  styleUrls: ['./game.component.css']
 })
 export class GameComponent {
   players$: Observable<Player[]>;

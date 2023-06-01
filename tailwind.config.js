@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        vesuvius: {
+        primary: {
           50: "#fffbeb",
           100: "#fef3c7",
           200: "#fde58a",
@@ -18,8 +18,17 @@ module.exports = {
           950: "#451a03",
         },
         secondary: {
-          100: "#013636",
-          200: "#002020",
+          50: '#f2f3ff',
+          100: '#e7e7ff',
+          200: '#d3d5ff',
+          300: '#afb0ff',
+          400: '#8681ff',
+          500: '#5f4fff',
+          600: '#4a2bfc',
+          700: '#4220e9',
+          800: '#3114c3',
+          900: '#2b139f',
+          950: '#16096c',
         },
       },
       fontFamily: {

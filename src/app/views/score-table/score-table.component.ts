@@ -4,7 +4,7 @@ import { Player } from '../../player';
 @Component({
   selector: 'app-score-table',
   templateUrl: './score-table.component.html',
-  styleUrls: ['./score-table.component.scss']
+  styleUrls: ['./score-table.component.css']
 })
 export class ScoreTableComponent {
   @Input() players: Player[]|null = null;

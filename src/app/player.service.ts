@@ -19,6 +19,7 @@ export class PlayerService {
   constructor() {
     this.addPlayerName("Michael");
   }
+
   get players$(): Observable<Player[]> {
     return this.playersSubject.asObservable().pipe(
       map((players) =>
@@ -95,6 +96,12 @@ export class PlayerService {
     );
     this.gameOverSubject.next(isGameOver);
   }
+
+  hasPlayers(): boolean {
+    const players = this.playersSubject.getValue();
+    return players.length > 0;
+  }
+
 }
 
 

@@ -1,9 +1,9 @@
-<div *ngFor="let player of players">
-  <div class="score-input-list flex justify-between mb-2">
+<div class="mb-2" *ngFor="let player of players">
+  <div class="score-input-list flex justify-between items-center">
     <span class="mr-3">{{ player.name }}</span>
     <div>
       <input
-      class="rounded p-1 mr-3 w-12 bg-vesuvius-300 text-vesuvius-950"
+        class="rounded p-1 w-12"
         [(ngModel)]="player.points[round || 0]"
         (change)="pointsChanged.emit(player)"
         #ctrl="ngModel"
@@ -13,10 +13,10 @@
     </div>
   </div>
 </div>
-<button
-  *ngIf="!gameOver"
-  (click)="nextRound.emit()"
-  type="button"
->
-  Next
+<div class="flex justify-end mb-2">
+<button class="icon-button" *ngIf="!gameOver" (click)="nextRound.emit()" type="button">
+  <svg class="" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M3 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062A1.125 1.125 0 013 16.81V8.688zM12.75 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062a1.125 1.125 0 01-1.683-.977V8.688z"></path>
+  </svg>
 </button>
+</div>

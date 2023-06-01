@@ -4,7 +4,7 @@ import { Player } from '../../player';
 @Component({
   selector: 'app-score-input',
   templateUrl: './score-input.component.html',
-  styleUrls: ['./score-input.component.scss']
+  styleUrls: ['./score-input.component.css']
 })
 export class ScoreInputComponent {
   @Input() players: Player[]|null = null;

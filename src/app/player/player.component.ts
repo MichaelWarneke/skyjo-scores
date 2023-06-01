@@ -6,7 +6,7 @@ import { Observable, of } from 'rxjs';
 @Component({
   selector: 'app-player',
   templateUrl: './player.component.html',
-  styleUrls: ['./player.component.scss']
+  styleUrls: ['./player.component.css']
 })
 export class PlayerComponent {
   players: Observable<Player[]>;
@@ -25,6 +25,11 @@ export class PlayerComponent {
   }
 
   start() {
-    this.startGame.emit();
+    if(this.playerService.hasPlayers()) {
+      this.startGame.emit();
+    } else {
+      
+    }
+    
   }
 }

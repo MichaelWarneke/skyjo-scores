@@ -69,20 +69,19 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "buildTarget": "skyjo-scores:build"
+          },
           "configurations": {
-            "production": {
-              "browserTarget": "skyjo-scores:build:production"
-            },
-            "development": {
-              "browserTarget": "skyjo-scores:build:development"
-            }
+            "production": {},
+            "development": {}
           },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "skyjo-scores:build"
+            
           }
         },
         "test": {
@@ -116,5 +115,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

@@ -1,10 +1,15 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+import { CommonModule, AsyncPipe } from '@angular/common';
+import { ScoreInputComponent } from '../views/score-input/score-input.component';
+import { ScoreTableComponent } from '../views/score-table/score-table.component';
 import { Player } from '../player';
 import { PlayerService } from '../player.service';
 import { Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-game',
+  standalone: true,
+  imports: [CommonModule, AsyncPipe, ScoreInputComponent, ScoreTableComponent],
   templateUrl: './game.component.html',
   styleUrls: ['./game.component.css']
 })

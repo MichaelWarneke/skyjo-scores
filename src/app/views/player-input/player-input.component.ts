@@ -1,18 +1,19 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-player-input',
+  standalone: true,
+  imports: [CommonModule, FormsModule],
   templateUrl: './player-input.component.html',
   styleUrls: ['./player-input.component.css']
 })
 export class PlayerInputComponent {
-
   name = new FormControl('');
   @Output() addPlayer = new EventEmitter<string>();
-  constructor() {
-    
-  }
+  constructor() {}
 
   add(name: string): void {
     name = name.trim();
